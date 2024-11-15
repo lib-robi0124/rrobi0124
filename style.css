@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Geist:wght@100..900&display=swap');
+@font-face {
+    font-family: "Geist-Bold";
+    src: url("fonts/Geist-Bold.ttf") format("truetype");
+}
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 24px;
+}
+p {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(157, 255, 0);
+}
+.oblique-font {
+    font-style: oblique;
+}
+.italic-font {
+    font-style: italic;
+}
+.font-pt-serif {
+    font-family: "PT Serif";
+    font-style: italic;
+}
+.size {
+    font-size: 2rem;
+    }
+
+    .text-decoration {
+        text-decoration: line-through solid black;
+    }
+    .paragraph-text-align {
+        text-align: left;
+    }
+    .text-shadow {
+        text-shadow: 1px 3px 10px red;
+    }
+
+    p::first-line {
+        color: red;
+    }
+    p::first-letter {
+        font-size: 299%;
+    }
