@@ -1,0 +1,36 @@
+/*
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+    .some-box {
+        background-color: green;
+    }
+    
+} */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+main {
+    background-color: blanchedalmond;
+    width: 50%;
+}
+
+ nav {
+    position: fixed;
+    width: 100vw;
+    height: 5vh;
+    background-color: aqua;
+    top: 0;
+    left: 0;
+ }
+ @media screen and (min-width:1200px) {
+    main {
+        width: 80%;
+        margin: 0px auto;
+    }
+ }
