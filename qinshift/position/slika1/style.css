@@ -2,17 +2,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
-body {
-    position: relative;
-}
-#head1, #head5 {
+.main-pic {
     width: 500px;
-    height: 100px;
-    border: 3px solid black;
+    height: 590px;
+    background-color: aquamarine;
     margin-left: 100px;
 }
+#head1 {
+    width: 500px;
+    height: 100px;
+    background-color: bisque;
+ }
 #head-txt {
     font-size: x-large;
     float: right;
@@ -22,40 +23,60 @@ body {
 #head2 {
     width: 500px;
     height: 30px;
-    border: 3px solid black;
-    margin-left: 100px;
-}
+    }
 #nav-txt {
     float: right;
 }
-
-#head3 {
+.menu-content {
     width: 500px;
     height: 360px;
-    border: 3px solid black;
-    margin-left: 100px;
+    margin-top: 0;
+    display: flex;
 }
-
+#menu {
+    width: 150px;
+    height: 360px;
+    background-color: blanchedalmond;
+    }
+#content {
+    width: 350px;
+    height: 360px;
+    background-color: cadetblue;
+    justify-content: flex-end;
+  }
+#menu-txt {
+    float: left;
+    font-size: x-large;
+   
+}
+#content-txt {
+   font-size: x-large;
+   }
 #footer-txt {
     float: left;
     margin-top: 25px;
     margin-left: 25px;
     font-size: x-large;
 }
-#menu-txt {
-    width: 145px;
-    height: 358px;
-    float: left;
-    margin-top: 0;
-    margin-left: 0;
-    font-size: x-large;
-    border: 3px solid black;
-}
-#content-txt {
-    margin-top: 20%;
-    margin-left: 25px;
-    font-size: x-large;
-    width: 358px;
-    height: 358px;
-    border: 2px solid black;
+
+@media screen and (max-width: 800px) {
+    .menu-content {
+        width: 500px;
+        height: 360px;
+        margin-top: 0;
+        position: relative;
+       
+    }
+    #menu {
+        width: 500px;
+        height: 100px;
+        background-color: blanchedalmond;
+        }
+    #content {
+        width: 500px;
+        height: 260px;
+        background-color: cadetblue;
+        position: absolute;
+        top: 100px;
+           
 }
