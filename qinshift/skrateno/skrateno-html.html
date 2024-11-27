@@ -1,0 +1,247 @@
+<!--pocetok (shift + ! + Enter)-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+     <p>this is a regular paragraph tag</p>
+	  <p>
+      This will be a mix of both <b>BOLD</b> words, and <i>ITALIC</i> words, and
+      this word will be <b><i> both </i></b>
+    </p>
+    <h1>This is the main heading</h1>
+    <h2>This would be a subheading of a website</h2>
+     <!-- Ordered lists example -->
+    <ol>
+      <li>List item 1</li>
+      <li>List item 2</li>
+      <li>List item 3</li>
+    </ol>
+
+    <!-- Unordered lists example -->
+    <ul>
+      <li>Unordered list item 1</li>
+      <li>Unordered list item 2</li>
+      <li>Unordered list item 3</li>
+    </ul>
+
+    <!-- Description list example -->
+    <dl>
+      <dt>Pita</dt>
+      <dd>Prekrasno jadenje za preku vikend a i cela nedela</dd>
+
+      <dt>Riba</dt>
+      <dd>Dobro za zdravjeto, no ednash nedelno</dd>
+    </dl>
+	 <!-- Nested lists -->
+    <ul>
+      <li>Car parts</li>
+      <li>
+        <ul>
+          <li>Engine</li>
+          <li>Alternator</li>
+        </ul>
+      </li>
+    </ul>
+    <br />
+   
+    <!-- anchor tag Hyperlinks-->
+	 <h3 id="title">Hyperlinks</h3>
+    <a href="https://www.wikipedia.com">Click here to open Wikipedia</a>
+    <p>
+      Clicking <a href="./about.html"> here </a> will take us to the
+      <em>About</em> page
+    </p>
+	 <!-- relative hyperlink -->
+    <p>
+      <a href="./contact/contact.html" target="_blank"
+        >Clicking here will take us to the contact page</a
+      >
+	  <!--prati mail-->
+    <a href="mailto:robert.ristovski@gmail.com">prati mail na robert</a>
+    </p>
+    <a href="#lorem">Take me to the lorem part</a>
+    <br />
+	<p id="lorem">
+	lorem-1000
+	</p>
+	 <!-- anchor back to the top -->
+    <a href="#title">Take me to top</a>
+       <!--anchor tag with new tab-->
+     <br />
+     <br />
+	  <!--Images-->
+    <h4>Add image from URL</h4>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwjvtARVQAFZvjgby4i1ev7I2h0OgHcG8YoQ&s"
+      alt="The Lord Of The Rings - The Fellowship Of The Ring"
+      width="800"
+    />
+    <br />
+    <p>Add image from filepth</p>
+    <img
+      src="./images/the-lord-of-the-rings.jpg"
+      alt="The Lord Of The Rings - The Fellowship Of The Ring"
+      title="The second part of the best movie ever"
+    />
+    <p>Image with a link</p>
+    <a href="https://www.imdb.com/title/tt0167260/" target="_blank">
+      <img
+        src="./images/the-return-of-the-king.jpg"
+        alt="The Lord Of The Rings - The Return Of The King"
+      />
+    </a>
+    <p>Gif image</p>
+    <img src="./images/minion-dancing.gif" alt="Dancing minion" />
+    <br />
+    <p>SVG image</p>
+    <img
+      src="https://www.svgrepo.com/show/334647/extension.svg"
+      alt="Example image in svg format"
+    />
+    <p>TABELI</p>
+    <!--Користиме <tr> за редови, <th> за поглавјата во ќелиите, и <td> за податоци во ќелиите-->
+            <!-- Basic table -->
+    <table border="2">
+      <caption>
+        Users and emails
+      </caption>
+      <thead>
+        <tr>
+          <th>First and Last Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>John Doe</td>
+          <td>johndoe@email.com</td>
+        </tr>
+        <tr>
+          <td>Jill Wayne</td>
+          <td>jillwayne@mail.com</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total Users</td>
+          <td>2</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- Colspan -->
+    <table border="2">
+      <caption>
+        School schedule
+      </caption>
+      <thead>
+        <th>Week day / Class</th>
+        <th>8am</th>
+        <th>9am</th>
+        <th>10am</th>
+        <th>11am</th>
+        <th>12am</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td colspan="2">Math</td>
+          <td>Biology</td>
+          <td colspan="2">Chemistry</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>English</td>
+          <td>Physics</td>
+          <td colspan="3">Gym</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Rowspan -->
+    <table border="2">
+      <caption>
+        Daily Program
+      </caption>
+      <thead>
+        <th>Hours / Program</th>
+        <th>HBO</th>
+        <th>TV1000</th>
+        <th>Sport Arena</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>6pm - 7pm</td>
+          <td rowspan="2"><img src="./images/circle.png" alt="" /></td>
+          <td>Comedy Central</td>
+          <td>NBA</td>
+        </tr>
+        <tr>
+          <td>7pm - 8pm</td>
+          <td>News</td>
+          <td>Weather</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Rowspan and colspan -->
+    <table border="2">
+      <caption>
+        Colspan and rowspan together
+      </caption>
+      <thead>
+        <th>Time</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>8AM - 9AM</td>
+          <td
+            rowspan="2"
+            style="background-color: chartreuse; border-radius: 50%"
+          >
+            Math
+          </td>
+          <td rowspan="3" colspan="2" style="background-color: red">Science</td>
+        </tr>
+        <tr>
+          <td>9AM - 10AM</td>
+        </tr>
+        <tr>
+          <td>10AM - 11AM</td>
+          <td>English</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>FORMI</p>
+    <!--za form koristime input type(action) metod(get/post)-->
+    <form action="" method="post">
+        <br>
+        <label for="username"><b>Username:</b></label>
+        <input type="text" name="username" id="username">
+        <br>
+         <!--selektiras vo krukcinja - so type= radio-->
+         <p><b>select</b></p>
+         <input type="radio" name="select" value="krukce" id="krukce">
+         <label for="krukce">krukce</label>
+         <!--selektiras/chekiras kvadratcinja - so type= checkbox-->
+         <p><b>check-box</b></p>
+         <input type="checkbox" name="service" value="kvadrat">
+         <label for="kvadrat" >kvadrat</label>
+		  
+		  <!--drop-down-list-select-->
+		  <p>Drop down list</p>
+         <label for="devices">What device do you listen to music on?</label>
+      <select name="devices" id="devices">
+         <option value="Phone">Phone</option>
+        <option value="Desktop">Desktop</option>
+       </select>
+    </form>
+  </body>
+</html>
