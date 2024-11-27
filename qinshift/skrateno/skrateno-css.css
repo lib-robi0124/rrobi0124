@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+  /* if you hover over the color itself, a color picker will pop up */
+  color: rgb(0, 216, 254);
+  background-color: black;
+}
+
+.hex-code {
+  /* color: #c0a718; */
+  color: #44001a;
+  background-color: rgb(212, 22, 50);
+}
+
+#named-color {
+  color: plum;
+  background-color: rgba(230, 9, 9, 0.041);
+}
+
+.hsl-body {
+  background-color: hsla(40, 100%, 50%, 0.469);
+}
+
+/* this is generally discouraged from using, try to stick to px/em/rem */
+.relative-size {
+  /* font-size: smaller; */
+  font-size: larger;
+  text-transform: capitalize;
+  color: brown;
+  line-height: 2;
+
+  /* used for chinese or japanese fonts, usually unsupported on normal fonts */
+  /* text-transform: full-width; */
+}
+
+.container {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.rem-example {
+  font-size: 2rem;
+  font-weight: 200;
+  font-style: italic;
+  text-transform: lowercase;
+  text-decoration: overline dotted red;
+}
+
+.paragraph {
+  font-size: 1.5em;
+  font-weight: 800;
+  font-style: oblique 30deg;
+  text-transform: uppercase;
+}
+
+.color-red {
+  color: red;
+}
+
+.aligned {
+  /* text-align: center; */
+  text-align: left;
+  /* align justify and justify-all will serve its purpose when we learn Flex/Grid */
+}
+
+.vertical-align {
+  font-size: 1.3em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.paragraph::first-line {
+  text-decoration: underline dashed red;
+}
+
+.top-aligned {
+  vertical-align: top;
+}
+
+.middle-aligned {
+  vertical-align: middle;
+}
+
+.bottom-aligned {
+  vertical-align: bottom;
+  text-shadow: -9px 4px 5px rgba(255, 12, 12, 0.85);
+}
+
+.middle-aligned::first-letter {
+  color: darkmagenta;
+  font-size: 60px;
+}
+
+/* Styling unvisited links (default) */
+.styled-link {
+    font-size: 1.2rem;
+    color: #36c5c5;
+    text-decoration: none;
+}
+
+/* Styling for hover state */
+.styled-link:hover {
+    color: #1010c0;
+}
+
+h1:hover {
+    color: red;
+    background-color: rgb(208, 110, 110);
+}
+
+/* Styling for active (clicked) state */
+.styled-link:active {
+    color: chocolate;
+    font-style: italic;
+}
+
+/* Styling for focus state */
+.styled-link:focus {
+    text-decoration: dotted 2px underline magenta;
+}
+
+/* Styling for visited links */
+/* .styled-link:visited {
+    color: yellow;
+} */
