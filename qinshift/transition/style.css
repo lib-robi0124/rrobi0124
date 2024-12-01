@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.kocka{
+    width: 300px;
+    height: 300px;
+    margin-top: 100px;
+    margin-left: 100px;
+    background-color: red;
+    border-radius: 100px;
+    transition: width 1s ease-in, height 1s ease-out 1s;
+
+
+}
+
+.kocka:hover {
+    background-color: yellow;
+    border-radius: 0;
+    width: 400px;
+    height: 400px;
+    /*transition-property: backgraund-color, border-radius ;
+    transition-duration: 1500ms;*/
+        
+}
+/*transition: background-color 1s border-radius 1s */
+.box {
+    background: #2db34a;
+    border-radius: 6px;
+    height: 95px;
+    width: 95px;
+    line-height: 95px;
+    text-align: center;
+  
+    /* Transition properties */
+    transition-property: background;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+  }
+  .box:hover {
+    background: #ff7b29;
+  }
+
