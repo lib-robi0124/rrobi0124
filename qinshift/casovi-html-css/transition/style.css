@@ -11,9 +11,8 @@
     background-color: red;
     border-radius: 100px;
     transition: width 1s ease-in, height 1s ease-out 1s;
-
-
-}
+    transition-duration: 5s;
+ }
 
 .kocka:hover {
     background-color: yellow;
@@ -24,6 +23,27 @@
     transition-duration: 1500ms;*/
         
 }
+@keyframes slide {
+    0% {
+      left: 0;
+      top: 0;
+    }
+    50% {
+      left: 244px;
+      top: 100px;
+    }
+    100% {
+      left: 488px;
+      top: 0;
+    }
+  }
+  .box:hover {
+    background: #ff7b29;
+    animation-name: slide;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .5s;
+  }
 /*transition: background-color 1s border-radius 1s */
 .box {
     background: #2db34a;
@@ -38,7 +58,5 @@
     transition-duration: 1s;
     transition-timing-function: linear;
   }
-  .box:hover {
-    background: #ff7b29;
-  }
+ 
 
