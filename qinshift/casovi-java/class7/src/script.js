@@ -22,3 +22,9 @@ setTimeout(function(){
         secondHeader.innerText = "I am joking it is cool page!";
     },1000)
 },2000);
+
+
+
+
+
+
