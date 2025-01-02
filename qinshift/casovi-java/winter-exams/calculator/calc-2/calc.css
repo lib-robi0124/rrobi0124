@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'JetBrains Mono', monospace;
 }
 body {
     background-color: var(--bg-color);
@@ -41,4 +42,23 @@ body {
     font-size: 1.6em;
     line-height: 1rem;
     overflow: hidden;
+}
+.display h1 {
+    white-space: nowrap;
+    text-align: end;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+}
+.btnsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 800;
+}
+.btnRow {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    flex: 4;
+
 }
