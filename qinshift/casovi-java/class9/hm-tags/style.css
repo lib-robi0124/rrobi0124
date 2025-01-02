@@ -1,0 +1,21 @@
+.tabButtonHidden {
+    visibility: hidden;
+ }
+ 
+ .tabButtonVisible {
+    visibility:visible;
+ }
+ 
+ 
+ #newTabButton {
+     background: rgba(216, 216, 216, 6);
+ 
+ }
+ 
+ h1 {
+     font: 100% Arial, Arial, Helvetica, sans-serif;
+     font-size: 1.25em;
+     font-weight:500;    
+     background: rgba(218, 235, 245, 6);
+     margin: 0px;
+ }

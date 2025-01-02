@@ -1,0 +1,28 @@
+1. read the requirement
+2. make document as brake in smaller pieces
+3. implement them separately
+
+=====================
+1, create html and js files
+2. html => create form with input and button
+		=> create empty <ul> where TODOs will be displayed
+3. JS 	=> select HTML elements
+		=> create empty array
+		=> create contructore function (creating objects) TODO, 
+		with properties Name and IsCompleted and metod - function;
+4. handle Add button (create event listener) for click
+		=> get value from input and save into var
+		=> validate input ( empty string , NaN , undefined)
+		=> create TODO objects (using contructore function)
+		=> and the TODO object in array
+5. Display TODOs logic
+		=> fill the <ul> list with the added TODOs
+		=> use innnerHTML or document.createElement approach
+		(include checkbox to the li element)
+		=> check if a TODO isCompleted
+			=> if yes, add appropiate (line-thru or delete)
+			=> if no, display just the value
+6. handle checkbox event
+		=> which event to use?
+		=> update object status ( IsCompleted, property)
+		=> re-render TODOs
