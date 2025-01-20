@@ -20,4 +20,6 @@ document.addEventListener(`DOMContentLoaded`, function () {
     div.style.backgroundColor = randomColor;
     div.style.color = `black`;
     div.innerText = randomColor;
-})
+});
+
+

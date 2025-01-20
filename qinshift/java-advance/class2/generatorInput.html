@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Generator with Inputs</h1>
+
+    <div style="margin-bottom: 10px;">
+        <label for="color" >Choose a color:</label>
+        <input type="color" id="colorInput" value="#ff0000">
+    <br>
+    <br>
+        <label for="fontSize" style="display: block; margin-bottom: 5px;">Font Size:</label>
+        <input type="number" id="fontSize" placeholder="e.g. 20 30">
+    <br>
+    <br>
+    
+        <label for="text" style="display: block; margin-bottom: 5px;">Items (separated by commas):</label>
+        <input type="text" id="items" placeholder="e.g. text1,test2">
+    </div>
+    <button id="reset">reset</button>
+    <br>
+    <br>
+
+    <button id="generateButton">Generate Title</button>
+    <ul id="listUl"></ul>
+   
+    <div class="list-container" id="listContainer" ></div>
+
+   </body>
+<script src="generatorInput.js"></script>
+</html>
+
+
+
