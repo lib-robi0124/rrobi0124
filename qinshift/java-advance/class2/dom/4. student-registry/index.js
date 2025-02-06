@@ -24,7 +24,7 @@ function Student(firstName, lastName, age, email) {
 // this function only handles logging of students
 function logStudents() {
 	for (let i = 0; i < database.length; i++) {
-		console.log(`${i + 1}) ${database[i].firstName}`)
+		console.log(`${i + 1}) ${database[i].firstName} ${database[i].lastName} ${database[i].email}`)
 	}
 }
 
