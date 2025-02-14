@@ -1,40 +1,73 @@
-const BASE_API_URL = "https://fakestoreapi.com/products";
+// const apiUrl = "https://fakestoreapi.in/api/products";
 let currentPage = 1;
-const fakestoreCategories = {
-    electronics: "electronics",
-    jewelery: "jewelery",
-    menclothing: "mensclothing",
-    womenclothing: "womenclothing",
-    currentResource: null
-}
+let selectedCategory = 'all';
+let categories = [];
+let cart = [];
+const urls = {
+  category: "https://fakestoreapi.in/api/products/category",
+  allProducts: "https://fakestoreapi.in/api/products",
+  productsByCategory: "https://fakestoreapi.com/products/category/",
+};
+
 const elements = {
-    productsBtn: document.getElementById("productsBtn"),
-    cartBtn: document.getElementById("cartBtn"),
-    prevBtn: document.getElementById("prevBtn"),
-    nextBtn: document.getElementById("nextBtn"),
-    filterDiv: document.getElementById("filters"),
-    categoryHeader: document.getElementById("category-title"),
-    productsDiv: document.getElementById("show-products"),
+  productsBtn: document.getElementById("productsBtn"),
+  cartBtn: document.getElementById("cartBtn"),
+  categoryBtn: document.getElementById("categoryBtn"),
+  prevBtn: document.getElementById("prevBtn"),
+  nextBtn: document.getElementById("nextBtn"),
+  filterDiv: document.getElementById("filters"),
+  categoryHeader: document.getElementById("category-title"),
+  productsDiv: document.getElementById("show-products"),
 }
-async function getDataAsync(resource) {
-    try {
-        const url = `${BASE_API_URL}${resource}?page=${currentPage}`;
-        const response = await fetch(url);
-        if (!response.ok)
-            throw new Error(`HTTP error! Status ${response.status}`);
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error("Error fetching data: ", error);
-        elements.resultDiv.innerHTML = `<p class="text-danger text-center">An error occurred. Please try again later.</p>`
-    } 
+// function Categories()
+
+// Fetch product categories and products
+async function fetchCategories() {
+  const response = await fetch(urls.category);
+  const data = await response.json();
+  categories.push(...data.categories); 
+
+//   // Add category buttons
+  const categoryMenu = document.getElementById('category-menu');
+  categories.forEach(category => {
+    const categoryBtn = document.createElement('button');
+    categoryBtn.classList.add('category-btn');
+    categoryBtn.textContent = category;
+    categoryBtn.dataset.category = category;
+    categoryBtn.addEventListener('click', () => filterByCategory(category));
+    categoryMenu.appendChild(categoryBtn);
+  }); }
+  // Fetch and display products based on category and pagination
+async function fetchProducts() {
+  const response = await fetch(`${apiUrl}?category=${selectedCategory}&page=${currentPage}`);
+  const products = await response.json();
+  const productGrid = document.getElementById('product-grid');
+  productGrid.innerHTML = '';
+
+  products.forEach(product => {
+    const productCard = document.createElement('div');
+    productCard.classList.add('product-card');
+    productCard.innerHTML = `
+      <img src="${product.image}" alt="${product.title}">
+      <h3>${product.title}</h3>
+      <p>$${product.price}</p>
+      <p>Category: ${product.category}</p>
+      <button onclick="addToCart(${product.id}, '${product.title}', ${product.price})">Add to Cart</button>
+    `;
+    productGrid.appendChild(productCard);
+  });
 }
-async function handleDataAsync(resource) {
-    const data = await getDataAsync(resource);
-    if (resource === fakestoreCategories.electronics) {
-        console.log(data);
-    } else if (resource === swapiResource.starships) {
-        renderShipsTable(data);
-    }
-    togglePaginationButtons(data.previous, data.next);
+// Handle category filter
+function filterByCategory(category) {
+  selectedCategory = category;
+  currentPage = 1;
+  fetchProducts();
 }
+
+// Add item to cart
+function addToCart(id, title, price) {
+  cart.push({ id, title, price });
+  updateCart();
+}
+
+
