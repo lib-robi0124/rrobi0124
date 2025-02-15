@@ -38,11 +38,19 @@
                         <li class="nav-item">
                             <a id="productsBtn" class="nav-link btn" aria-current="page" href="#">Products</a>
                         </li>
-                        <!-- Category Menu -->
-                        <nav id="category-menu">
-                            <button class="category-btn btn" data-category="all">All Categories</button>
-                        </nav>
-
+                        <div class="btn-group">
+                            <button type="button" class="btn category-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                              Gategories
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li><button class="dropdown-item" type="button" id="tv">TV</button></li>
+                              <li><button class="dropdown-item" type="button" id="audio">AUDIO</button></li>
+                              <li><button class="dropdown-item" type="button" id="laptop">LAPTOP</button></li>
+                              <li><button class="dropdown-item" type="button" id="mobile">MOBILE</button></li>
+                              <li><button class="dropdown-item" type="button" id="gaming">GAMING</button></li>
+                              <li><button class="dropdown-item" type="button" id="appliance">APPLIANCE</button></li>
+                            </ul>
+                          </div>
                         <li class="nav-item">
                             <a id="cartBtn" class="nav-link btn" href="#">Cart</a>
                         </li>
