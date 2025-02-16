@@ -46,10 +46,10 @@ function getAllProducts() {
       .then((products) => {
         console.log(products);
         elements.productgrid.innerHTML = '';
-        for (let key in products) {
-           
-                const product = products[key];
-                const cardProduct = new Productscards(product.image, product.title, product.price, product.category, product.id);
+        for (let i = 0; i < products.length; i++) {
+          
+                const cardProduct = new Productscards(products[i].image, products[i].title, products[i].price, products[i].category, products[i].id);
+                console.log(cardProduct);
 
                 const productCard = document.createElement('div');
                 productCard.classList.add('col');
@@ -74,7 +74,6 @@ function getAllProducts() {
     elements.productsBtn.addEventListener("click", getAllProducts);
 }
 
-
-               
+      
 
     
