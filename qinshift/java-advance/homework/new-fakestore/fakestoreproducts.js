@@ -1,8 +1,8 @@
 // create button event to fetch all products
 // show them in product cart
 // create button ADD to Cart
-// create event ADD to Cart button to create constructor Object with parametars
-// when you chouse category item
+// create event ADD to Cart button to create constructor Object with parameters
+// when you choice category item
 // -- clean products , fetch by category 
 
 
