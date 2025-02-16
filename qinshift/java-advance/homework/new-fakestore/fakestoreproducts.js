@@ -5,33 +5,34 @@
 // when you chouse category item
 // -- clean products , fetch by category 
 
-const BASE_API_URL = "https://fakestoreapi.in/api/products";
-let currentPage = 1;
 
-const elements = {
+const BASE_API_URL = "https://fakestoreapi.in/api/products"; //** make base url  */
+let currentPage = 1; //** starting page for all products next / prev request */
+
+const elements = {            //** catch all Btn and make categories in Btn */
     productsBtn: document.getElementById("productsBtn"),
-    tvBtn: document.getElementById("tvBtn"),
-    audioBtn: document.getElementById("audioBtn"),
-    laptopBtn: document.getElementById("laptopBtn"),
-    mobileBtn: document.getElementById("mobileBtn"),
-    gaminBtn: document.getElementById("gamingBtn"),
-    applianceBtn: document.getElementById("aplianceBtn"),
+    // tvBtn: document.getElementById("tvBtn"),
+    // audioBtn: document.getElementById("audioBtn"),
+    // laptopBtn: document.getElementById("laptopBtn"),
+    // mobileBtn: document.getElementById("mobileBtn"),
+    // gamingBtn: document.getElementById("gamingBtn"),
+    // applianceBtn: document.getElementById("applianceBtn"),
     productgrid: document.getElementById("product-grid"),
     cartBtn: document.getElementById("cartBtn"),
     loader: document.getElementById("loader"),
     prevBtn: document.getElementById("prevBtn"),
     nextBtn: document.getElementById("nextBtn"),
 }
-function Productscards(image, title, price, category, id) {
-    this.image = image;
+function Productscards(image, title, price, category, id) {  //** construction func for Card */
+    this.image = image;   
     this.title = title;
     this.price = price;
     this.category = category;
     this.id = id;
    
 }
-
-async function fetchByCategory() {
+//** func to fetch filter categories item  */
+async function fetchByCategory(category) {
     try {
         elements.loader.style.display = "block";
         const url = `${BASE_API_URL}/category?type=${category}`;
@@ -45,8 +46,9 @@ async function fetchByCategory() {
         elements.resultDiv.innerHTML = `<p class="text-danger text-center">An error occurred. Please try again later.</p>`
     } finally {
        elements.loader.style.display = "none";
-    }}
+    }};
 
+//** func for All Products with limit 8 */    
 async function getAllProducts() {
     try {
         elements.loader.style.display = "block";
@@ -61,11 +63,11 @@ async function getAllProducts() {
     elements.resultDiv.innerHTML = `<p class="text-danger text-center">An error occurred. Please try again later.</p>`
 } finally {
     elements.loader.style.display = "none";
- }}
+ }};
 
-
- function showProductCards(){
-    elements.productgrid.innerHTML = '';
+//** func to show product card in HTML */
+ function showProductCards(data){
+    elements.productgrid.innerHTML = ''; // Clear the product grid before adding new cards
     for (let i = 0; i < data.length; i++) {
             const cardProduct = new Productscards(data[i].image, data[i].title, data[i].price, data[i].category, data[i].id);
             const productCard = document.createElement('div');
@@ -82,28 +84,40 @@ async function getAllProducts() {
                         </div>
             `;
             elements.productgrid.appendChild(productCard);
-                }
- }
-// Event listeners for category buttons
-elements.tvBtn.addEventListener("click", () => fetchByCategory('tv'));
-elements.audioBtn.addEventListener("click", () => fetchByCategory('audio'));
-elements.laptopBtn.addEventListener("click", () => fetchByCategory('laptop'));
-elements.mobileBtn.addEventListener("click", () => fetchByCategory('mobile'));
-elements.gamingBtn.addEventListener("click", () => fetchByCategory('gaming'));
-elements.applianceBtn.addEventListener("click", () => fetchByCategory('appliance'));
+        } };
+// Example call to showProductCards - for testing
+// const exampleData = [
+//     { image: 'image1.jpg', title: 'Product 1', price: 100, category: 'tv', id: 1 },
+//     { image: 'image2.jpg', title: 'Product 2', price: 200, category: 'audio', id: 2 }
+// ];
+// showProductCards(exampleData);
+
+
+//**  Event listeners for category buttons */
+// elements.tvBtn.addEventListener("click", () => fetchByCategory('tv'));
+// elements.audioBtn.addEventListener("click", () => fetchByCategory('audio'));
+// elements.laptopBtn.addEventListener("click", () => fetchByCategory('laptop'));
+// elements.mobileBtn.addEventListener("click", () => fetchByCategory('mobile'));
+// elements.gamingBtn.addEventListener("click", () => fetchByCategory('gaming'));
+// elements.applianceBtn.addEventListener("click", () => fetchByCategory('appliance'));
+
+const categories = ['tv', 'audio', 'laptop', 'mobile', 'gaming', 'appliance'];
+categories.forEach(cat => {
+    document.getElementById(`${cat}Btn`).addEventListener("click", () => fetchByCategory(cat));
+});
 
 elements.productsBtn.addEventListener("click", async () => {
-    currentPage = 1; // Reset to the first page when selecting "people"
+    currentPage = 1; 
     await getAllProducts();
 });
 elements.nextBtn.addEventListener("click", async () => {
     currentPage++;
     await getAllProducts();
-})
+});
 
 elements.prevBtn.addEventListener("click", async () => {
     if(currentPage > 1) {
     currentPage--;
     await getAllProducts();
     }
-})
+});
