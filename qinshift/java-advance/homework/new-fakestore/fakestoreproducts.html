@@ -13,27 +13,65 @@
 </head>
 <body>
 
-    <div class="container my-4">
-        <img src="logo-cart.png" alt="store logo" class="d-block mx-auto mb-4" style="width: 150px;">
-    
-        <div class="row mb-3 text-center">
-            <div class="col">
-                <img src="product.png" alt="product" class="img-fluid imgBtn" id="productsBtn" style="width: 100px; cursor: pointer;">
-            </div>
-            <div class="col">
-                <img src="category.png" alt="category" class="img-fluid imgBtn" id="category-btn" style="width: 100px;">
-            </div>
-        </div>
-    
-        <div class="row">
-            <div class="col text-center">
-                <button class="btn btn-warning" id="prevBtn">&lt;&lt;</button>
-                <button class="btn btn-warning" id="nextBtn">&gt;&gt;</button>
+    <header class="header">
+        <div class="top-bar">
+            <div class="top-bar_content">
+                <section class="phone">
+                    <i class="fa-solid fa-phone icon"></i>
+                    +389-7x-123456
+                </section>
+                <section class="emai">
+                    <i class="fa-solid fa-envelope icon"></i>
+                    info@fakestore.rj
+                </section>
             </div>
         </div>
+        <div class="bottom-bar">
+            <div class="bottom-bar_content">
+                <a href="#" class="logo">
+                    <img src="logo-cart.png" alt="" class="logo_img">
+                    <span class="logo_text">FakeStoreProducts</span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav_list">
+                        <li class="nav-item">
+                            <a id="productsBtn" class="nav-link btn" aria-current="page" href="#">Products</a>
+                        </li>
+                        <div class="btn-group">
+                            <button type="button" class="btn category-btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                              Gategories
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                              <li><button class="dropdown-item" type="button" id="tvBtn">TV</button></li>
+                              <li><button class="dropdown-item" type="button" id="audioBtn">AUDIO</button></li>
+                              <li><button class="dropdown-item" type="button" id="laptopBtn">LAPTOP</button></li>
+                              <li><button class="dropdown-item" type="button" id="mobileBtn">MOBILE</button></li>
+                              <li><button class="dropdown-item" type="button" id="gamingBtn">GAMING</button></li>
+                              <li><button class="dropdown-item" type="button" id="applianceBtn">APPLIANCE</button></li>
+                            </ul>
+                          </div>
+                        <li class="nav-item">
+                            <a id="cartBtn" class="nav-link btn" href="#">Cart</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
     
         <div class="row row-cols-1 row-cols-md-3 g-4 mt-4" id="product-grid"></div>
-    </div>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <button class="btn btn-warning center" id="prevBtn">
+                    << </button>
+            </div>
+            <div class="col">
+                <button class="btn btn-warning center" id="nextBtn">>></button>
+            </div>
+            <div class="col"></div>
+        </div>
 </body>
 <script src="fakestoreproducts.js"></script>
 </html>
