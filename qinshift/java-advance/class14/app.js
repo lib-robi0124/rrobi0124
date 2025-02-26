@@ -19,6 +19,8 @@ try {
     // addUser(bob);
     userService.addUser(john);
     userService.addUser(bob);
+    userService.addUser(bob);
+
 
 } catch (error) {
        loggerService. logError(error);

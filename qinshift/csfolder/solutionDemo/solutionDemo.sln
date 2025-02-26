@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "solutionDemo", "solutionDemo\solutionDemo.csproj", "{D0C1185D-FDBC-4E66-BE99-7AA93139744A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "qinshift.stars", "qinshift.stars\qinshift.stars.csproj", "{1BEF357A-5683-406F-87AE-78EE610955DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0C1185D-FDBC-4E66-BE99-7AA93139744A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0C1185D-FDBC-4E66-BE99-7AA93139744A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0C1185D-FDBC-4E66-BE99-7AA93139744A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0C1185D-FDBC-4E66-BE99-7AA93139744A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BEF357A-5683-406F-87AE-78EE610955DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BEF357A-5683-406F-87AE-78EE610955DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BEF357A-5683-406F-87AE-78EE610955DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BEF357A-5683-406F-87AE-78EE610955DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA7DE758-1A35-4151-96C6-FF66DAA92161}
+	EndGlobalSection
+EndGlobal
